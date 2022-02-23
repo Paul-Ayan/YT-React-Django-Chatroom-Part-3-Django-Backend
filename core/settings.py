@@ -27,7 +27,7 @@ SECRET_KEY = 'h6__pz5m$yk#s2l93$c6ux=%!r1hm%3h%5-^$pb9wzv5^gp*@3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -135,7 +135,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
+            "hosts": [os.environ.get('REDIS_URL', 'redis://red-c8b77ov9re0qhiqadr50:6379')],
         },
     },
 }
@@ -145,13 +145,4 @@ CHANNEL_LAYERS = {
     }
 } """
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 0
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-CSP_DEFAULT_SRC = ("'self'",)
-CSP_STYLE_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'",)
-CSP_IMG_SRC = ("'self'",)
-CSP_FONT_SRC = ("'self'",)
+
